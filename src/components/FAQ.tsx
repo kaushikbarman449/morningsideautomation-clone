@@ -845,13 +845,13 @@ const FAQs = () => {
                     </div>
                     <Accordion type="single" collapsible className="w-full flex-1">
                         <AccordionItem value="item-1" className="my-2 rounded-xl backdrop-opacity-10 backdrop-invert bg-transparent px-8">
-                            <AccordionTrigger>Who&apos;s the perfect fit for Morningside Automation?</AccordionTrigger>
+                            <AccordionTrigger className="text-left">Who&apos;s the perfect fit for Morningside Automation?</AccordionTrigger>
                             <AccordionContent>
                                 A brilliant question! Morningside Automation caters to entrepreneurs and small to medium businesses aiming to bulletproof their operations through AI. Our bespoke automations, devoid of hefty custom code costs, can seamlessly integrate into your business in just a few days.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2" className="my-2 rounded-xl backdrop-opacity-10 backdrop-invert bg-transparent px-8">
-                            <AccordionTrigger>Who won&apos;t benefit from Morningside Automation? </AccordionTrigger>
+                            <AccordionTrigger className="text-left">Who won&apos;t benefit from Morningside Automation? </AccordionTrigger>
                             <AccordionContent>
                                 Morningside Automation may not suit those who are looking to develop web applications or require intricate, custom-coded AI solutions. If you&apos;re on the fence about whether we&apos;re the right fit for you, feel free to book a call with us.
                             </AccordionContent>

@@ -90,7 +90,7 @@ const Plans = () => {
                         <div className="my-8 border-t border-white/10 rounded-xl w-full"></div>
                         <div className="flex justify-center flex-col">
                             {Object.values(data.price).map((item, index) => (
-                                <h4 className={`text-2xl font-semibold text-center text-white ${item === '$8,450/m' ? 'line-through' : ''} ${item === '$6,000/m' ? 'text-red-500' : ''}`} key={index}>{item}
+                                <h4 className={`text-2xl font-semibold text-center ${item === '$8,450/m' && 'line-through'} ${item === '$6,000/m' ? 'text-red-500' : 'text-white'}`} key={index}>{item}
                                     {item === '$6,000/m' && <span className="ml-2 align-middle mb-1 max-h-5 inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">{data.type}</span>}
                                 </h4>
                             ))}
@@ -107,7 +107,7 @@ const Plans = () => {
                                 </ul>
                             </>
                         ))}
-                        <ClickButton name={data.title === 'Monthly' ? "Apply For Beta" : "Currently Unavailable"} className="mt-8" />
+                        <ClickButton name={data.title === 'Monthly' ? "Apply For Beta" : "Currently Unavailable"} className={`mt-8 ${data.title != 'Monthly' && 'bg-[#14172c] text-white pointer-events-none'}`} />
                     </div>
                 ))}
             </div>
