@@ -64,7 +64,7 @@ const Navbar = () => {
                         <div className="relative z-30">
                             {!menuIcon ? <Menu color="#ffffff" style={{ cursor: "pointer" }} onClick={() => setMenuIcon(true)} /> : <X color="#ffffff" style={{ cursor: "pointer" }} onClick={() => setMenuIcon(false)} />}
                         </div>
-                        {menuIcon && <div className="absolute bg-[#030712] lg:hidden h-screen top-0 right-0 w-1/2 py-16 px-4">
+                        {menuIcon && <div className="fixed z-10 bg-[#030712] lg:hidden h-full top-0 right-0 w-1/2 py-16 px-4">
                             {Link.map((links) => (
                                 <a key={links.id} href={links.href} className="flex justify-center p-4 rounded-lg hover:bg-[#111827] text-white font-family cursor-pointer mt-2 active:underline underline-offset-8 duration-200">
                                     {links.title}
