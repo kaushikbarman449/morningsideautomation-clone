@@ -46,7 +46,7 @@ const Link: Links[] = [
 
 const Navbar = () => {
 
-    const [menuIcon, setMenuIcon] = useState<boolean>(true)
+    const [menuIcon, setMenuIcon] = useState<boolean>(false)
     return (
         <>
             <header className="bg-gray-800 px-8 p-6">
@@ -62,7 +62,7 @@ const Navbar = () => {
                     </a>
                     <div className="lg:hidden">
                         <div className="relative z-30">
-                            {menuIcon ? <Menu color="#ffffff" style={{ cursor: "pointer" }} onClick={() => setMenuIcon(false)} /> : <X color="#ffffff" style={{ cursor: "pointer" }} onClick={() => setMenuIcon(true)} />}
+                            {!menuIcon ? <Menu color="#ffffff" style={{ cursor: "pointer" }} onClick={() => setMenuIcon(true)} /> : <X color="#ffffff" style={{ cursor: "pointer" }} onClick={() => setMenuIcon(false)} />}
                         </div>
                         {menuIcon && <div className="absolute bg-[#030712] lg:hidden h-screen top-0 right-0 w-1/2 py-16 px-4">
                             {Link.map((links) => (
