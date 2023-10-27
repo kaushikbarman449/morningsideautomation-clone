@@ -67,12 +67,15 @@ const Navbar = () => {
                         {menuIcon &&
                             <div className="fixed z-20 bg-[#030712] lg:hidden h-full top-0 right-0 w-1/2 py-6 px-4">
                                 <div className="flex justify-between">
-                                    <Image
-                                        src='/title.png'
-                                        alt="website-image"
-                                        width={100}
-                                        height={36}
-                                    />
+                                    <a href="#">
+                                        <span className="sr-only">MVP</span>
+                                        <Image
+                                            src='/title.png'
+                                            alt="website-image"
+                                            width={124}
+                                            height={36}
+                                        />
+                                    </a>
                                     {menuIcon && <X color="#ffffff" style={{ cursor: "pointer" }} onClick={() => setMenuIcon(false)} />}
                                 </div>
                                 {Link.map((links) => (
