@@ -82,7 +82,7 @@ const Plans = () => {
                     </div>
                 </div>
             </MaxWidthWrapper>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-24 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-24 max-w-4xl mx-auto z-10">
                 {MoneyPlan.map(data => (
                     <div key={data.id} className={`${data.title === 'Monthly' ? 'bg-[#381B75]' : 'bg-[#101624]'}  p-8 z-10 flex flex-col justify-center`}>
                         <h3 className="text-2xl font-semibold text-white text-left">{data.title}</h3>

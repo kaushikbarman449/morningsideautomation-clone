@@ -62,16 +62,26 @@ const Navbar = () => {
                     </a>
                     <div className="lg:hidden">
                         <div className="relative z-30">
-                            {!menuIcon ? <Menu color="#ffffff" style={{ cursor: "pointer" }} onClick={() => setMenuIcon(true)} /> : <X color="#ffffff" style={{ cursor: "pointer" }} onClick={() => setMenuIcon(false)} />}
+                            {!menuIcon && <Menu color="#ffffff" style={{ cursor: "pointer", position: "relative" }} onClick={() => setMenuIcon(true)} />}
                         </div>
-                        {menuIcon && <div className="fixed z-10 bg-[#030712] lg:hidden h-full top-0 right-0 w-1/2 py-16 px-4">
-                            {Link.map((links) => (
-                                <a key={links.id} href={links.href} className="flex justify-center p-4 rounded-lg hover:bg-[#111827] text-white font-family cursor-pointer mt-2 active:underline underline-offset-8 duration-200">
-                                    {links.title}
-                                </a>
-                            ))}
-                            <ClickButton name="View Plans" className="hover:bg-black hover:text-white duration-300 w-full" />
-                        </div>}
+                        {menuIcon &&
+                            <div className="fixed z-20 bg-[#030712] lg:hidden h-full top-0 right-0 w-1/2 py-6 px-4">
+                                <div className="flex justify-between">
+                                    <Image
+                                        src='/title.png'
+                                        alt="website-image"
+                                        width={100}
+                                        height={36}
+                                    />
+                                    {menuIcon && <X color="#ffffff" style={{ cursor: "pointer" }} onClick={() => setMenuIcon(false)} />}
+                                </div>
+                                {Link.map((links) => (
+                                    <a key={links.id} href={links.href} className="flex justify-center p-4 rounded-lg hover:bg-[#111827] text-white font-family cursor-pointer mt-2 active:underline underline-offset-8 duration-200">
+                                        {links.title}
+                                    </a>
+                                ))}
+                                <ClickButton name="View Plans" className="hover:bg-black hover:text-white duration-300 w-full mt-4" />
+                            </div>}
                     </div>
 
                     <div className="gap-12 ml-24 hidden lg:flex">
